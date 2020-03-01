@@ -11,8 +11,8 @@ use Bone\Mvc\Router\Decorator\ExceptionDecorator;
 use Bone\Mvc\Router\Decorator\NotAllowedDecorator;
 use Bone\Mvc\Router\Decorator\NotFoundDecorator;
 use Bone\Mvc\Router\PlatesStrategy;
-use Bone\Mvc\View\Extension\Plates\AlertBox;
-use Bone\Mvc\View\PlatesEngine;
+use Bone\View\Extension\Plates\AlertBox;
+use Bone\View\PlatesEngine;
 
 class ViewPackage implements RegistrationInterface
 {
