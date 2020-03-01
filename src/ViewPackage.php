@@ -6,6 +6,7 @@ namespace Bone\View;
 
 use Barnacle\Container;
 use Barnacle\RegistrationInterface;
+use Bone\Mvc\Router;
 use Bone\Mvc\Router\Decorator\ExceptionDecorator;
 use Bone\Mvc\Router\Decorator\NotAllowedDecorator;
 use Bone\Mvc\Router\Decorator\NotFoundDecorator;
@@ -71,7 +72,8 @@ class ViewPackage implements RegistrationInterface
         $strategy = $c->get(PlatesStrategy::class);
         $strategy->setContainer($c);
 
-        $this->router->setStrategy($strategy);
+        $router = $c->get(Router::class);
+        $router->setStrategy($strategy);
     }
 
     /**
