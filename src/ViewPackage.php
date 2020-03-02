@@ -6,7 +6,7 @@ namespace Bone\View;
 
 use Barnacle\Container;
 use Barnacle\RegistrationInterface;
-use Bone\Mvc\Router;
+use Bone\Router\Router;
 use Bone\Router\Decorator\ExceptionDecorator;
 use Bone\Router\Decorator\NotAllowedDecorator;
 use Bone\Router\Decorator\NotFoundDecorator;
