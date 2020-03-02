@@ -2,8 +2,6 @@
 
 namespace Bone\View;
 
-use Bone\View\PlatesEngine;
-
 interface ViewAwareInterface
 {
     /**

@@ -7,10 +7,10 @@ namespace Bone\View;
 use Barnacle\Container;
 use Barnacle\RegistrationInterface;
 use Bone\Mvc\Router;
-use Bone\Mvc\Router\Decorator\ExceptionDecorator;
-use Bone\Mvc\Router\Decorator\NotAllowedDecorator;
-use Bone\Mvc\Router\Decorator\NotFoundDecorator;
-use Bone\Mvc\Router\PlatesStrategy;
+use Bone\Router\Decorator\ExceptionDecorator;
+use Bone\Router\Decorator\NotAllowedDecorator;
+use Bone\Router\Decorator\NotFoundDecorator;
+use Bone\Router\PlatesStrategy;
 use Bone\View\Extension\Plates\AlertBox;
 use Bone\View\PlatesEngine;
 
