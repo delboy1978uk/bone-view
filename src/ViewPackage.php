@@ -12,7 +12,7 @@ use Bone\Router\Decorator\NotAllowedDecorator;
 use Bone\Router\Decorator\NotFoundDecorator;
 use Bone\Router\PlatesStrategy;
 use Bone\View\Extension\Plates\AlertBox;
-use Bone\View\PlatesEngine;
+use Bone\View\ViewEngine;
 
 class ViewPackage implements RegistrationInterface
 {
@@ -22,15 +22,15 @@ class ViewPackage implements RegistrationInterface
     public function addToContainer(Container $c)
     {
         // set up the view engine dependencies
-        $viewEngine = new PlatesEngine($c->get('viewFolder'));
+        $viewEngine = new ViewEngine($c->get('viewFolder'));
         $viewEngine->loadExtension(new AlertBox());
 
-        $c[PlatesEngine::class] = $viewEngine;
+        $c[ViewEngine::class] = $viewEngine;
 
         $c[NotFoundDecorator::class] = $c->factory(function (Container $c) {
             $layout = $c->get('default_layout');
             $templates = $c->get('error_pages');
-            $viewEngine = $c->get(PlatesEngine::class);
+            $viewEngine = $c->get(ViewEngine::class);
             $notFoundDecorator = new NotFoundDecorator($viewEngine, $templates);
             $notFoundDecorator->setLayout($layout);
 
@@ -40,7 +40,7 @@ class ViewPackage implements RegistrationInterface
         $c[NotAllowedDecorator::class] = $c->factory(function (Container $c) {
             $layout = $c->get('default_layout');
             $templates = $c->get('error_pages');
-            $viewEngine = $c->get(PlatesEngine::class);
+            $viewEngine = $c->get(ViewEngine::class);
             $notAllowedDecorator = new NotAllowedDecorator($viewEngine, $templates);
             $notAllowedDecorator->setLayout($layout);
 
@@ -48,7 +48,7 @@ class ViewPackage implements RegistrationInterface
         });
 
         $c[ExceptionDecorator::class] = $c->factory(function (Container $c) {
-            $viewEngine = $c->get(PlatesEngine::class);
+            $viewEngine = $c->get(ViewEngine::class);
             $layout = $c->get('default_layout');
             $templates = $c->get('error_pages');
             $decorator = new ExceptionDecorator($viewEngine, $templates);
@@ -58,7 +58,7 @@ class ViewPackage implements RegistrationInterface
         });
 
         $c[PlatesStrategy::class] = $c->factory(function (Container $c) {
-            $viewEngine = $c->get(PlatesEngine::class);
+            $viewEngine = $c->get(ViewEngine::class);
             $notFoundDecorator = $c->get(NotFoundDecorator::class);
             $notAllowedDecorator = $c->get(NotAllowedDecorator::class);
             $exceptionDecorator = $c->get(ExceptionDecorator::class);

@@ -5,12 +5,12 @@ namespace Bone\View;
 interface ViewAwareInterface
 {
     /**
-     * @param PlatesEngine $view
+     * @param ViewEngineInterface $view
      */
-    public function setView(PlatesEngine $view): void;
+    public function setView(ViewEngineInterface $view): void;
 
     /**
-     * @return PlatesEngine
+     * @return ViewEngineInterface
      */
-    public function getView(): PlatesEngine;
+    public function getView(): ViewEngineInterface;
 }
