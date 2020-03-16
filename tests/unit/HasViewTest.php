@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace BoneTest\Traits;
+namespace BoneTest;
 
 use Bone\View\Traits\HasViewTrait;
 use Bone\View\ViewEngine;
@@ -10,7 +10,7 @@ use Del\SessionManager;
 
 class HasViewTest extends Test
 {
-    public function testRouter()
+    public function testTrait()
     {
         $class = new class {
           use HasViewTrait;

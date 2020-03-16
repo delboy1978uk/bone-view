@@ -1,0 +1,883 @@
+<?php
+$coverage = new SebastianBergmann\CodeCoverage\CodeCoverage;
+$coverage->setData(array (
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Traits/HasViewTrait.php' => 
+  array (
+    17 => 
+    array (
+      0 => 'BoneTest\\HasViewTest::testTrait',
+    ),
+    18 => 
+    array (
+      0 => 'BoneTest\\HasViewTest::testTrait',
+    ),
+    25 => 
+    array (
+      0 => 'BoneTest\\HasViewTest::testTrait',
+    ),
+    26 => NULL,
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewEngineInterface.php' => 
+  array (
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewEngine.php' => 
+  array (
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Extension/Plates/AlertBox.php' => 
+  array (
+    16 => 
+    array (
+      0 => 'BoneTest\\ViewPackageTest::testPackage',
+    ),
+    17 => 
+    array (
+      0 => 'BoneTest\\ViewPackageTest::testPackage',
+    ),
+    25 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    27 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    28 => NULL,
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Helper/AlertBox.php' => 
+  array (
+    13 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    14 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    16 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    17 => NULL,
+    25 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    26 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+    ),
+    28 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      1 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    29 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      1 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    31 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      1 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    32 => NULL,
+    40 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    41 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    42 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      1 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    44 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    45 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    46 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    47 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    48 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    49 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    51 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    53 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPackage',
+      1 => 'BoneTest\\ViewHelperTest::testWithCssClass',
+      2 => 'BoneTest\\ViewHelperTest::testMultiline',
+    ),
+    54 => NULL,
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Helper/Exception/PaginatorException.php' => 
+  array (
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Helper/Paginator.php' => 
+  array (
+    22 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    23 => NULL,
+    30 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+      1 => 'BoneTest\\ViewHelperTest::testPaginator',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      3 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      4 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+    ),
+    31 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+      1 => 'BoneTest\\ViewHelperTest::testPaginator',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      3 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      4 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+    ),
+    38 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      1 => 'BoneTest\\ViewHelperTest::testLastPage',
+      2 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    39 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      1 => 'BoneTest\\ViewHelperTest::testLastPage',
+      2 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    46 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    47 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    54 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      1 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    55 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      1 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    62 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    63 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    70 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+    ),
+    71 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+    ),
+    73 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+    ),
+    74 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+    ),
+    81 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    82 => NULL,
+    89 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorPageCountException',
+      1 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+      2 => 'BoneTest\\ViewHelperTest::testPaginator',
+      3 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      4 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      5 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      6 => 'BoneTest\\ViewHelperTest::testLastPage',
+      7 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      8 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    90 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorPageCountException',
+    ),
+    92 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+      1 => 'BoneTest\\ViewHelperTest::testPaginator',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      3 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      4 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      5 => 'BoneTest\\ViewHelperTest::testLastPage',
+      6 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      7 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    99 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+      1 => 'BoneTest\\ViewHelperTest::testPaginator',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      3 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      4 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      5 => 'BoneTest\\ViewHelperTest::testLastPage',
+      6 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      7 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    100 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+    ),
+    102 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    109 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      4 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    111 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      4 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    112 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+    ),
+    113 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      2 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      3 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    114 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+    ),
+    116 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      1 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    118 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      1 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    119 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+    ),
+    123 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      4 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    124 => NULL,
+    132 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorPageCountException',
+      1 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+      2 => 'BoneTest\\ViewHelperTest::testPaginator',
+      3 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      4 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      5 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      6 => 'BoneTest\\ViewHelperTest::testLastPage',
+      7 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      8 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    133 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginatorException',
+      1 => 'BoneTest\\ViewHelperTest::testPaginator',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      3 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      4 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      5 => 'BoneTest\\ViewHelperTest::testLastPage',
+      6 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      7 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    135 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    137 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    138 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      4 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    139 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      4 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    141 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      1 => 'BoneTest\\ViewHelperTest::testLastPage',
+    ),
+    142 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      1 => 'BoneTest\\ViewHelperTest::testLastPage',
+    ),
+    145 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    146 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    148 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    149 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    152 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    153 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    154 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    156 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    157 => NULL,
+    166 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    167 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    168 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    169 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+    ),
+    171 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testLastPage',
+      4 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      5 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    173 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    175 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    176 => NULL,
+    185 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    186 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    187 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    188 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testLastPage',
+    ),
+    190 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      5 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    192 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    194 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    195 => NULL,
+    203 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    204 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    205 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    207 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    208 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    209 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    211 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    213 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    215 => 
+    array (
+      0 => 'BoneTest\\ViewHelperTest::testPaginator',
+      1 => 'BoneTest\\ViewHelperTest::testCalculateStart',
+      2 => 'BoneTest\\ViewHelperTest::testCalculateStart2',
+      3 => 'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords',
+      4 => 'BoneTest\\ViewHelperTest::testLastPage',
+      5 => 'BoneTest\\ViewHelperTest::testEvenPagerSizePage',
+      6 => 'BoneTest\\ViewHelperTest::testLotsOfPages',
+    ),
+    216 => NULL,
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewPackage.php' => 
+  array (
+    20 => 
+    array (
+      0 => 'BoneTest\\ViewPackageTest::testPackage',
+    ),
+    21 => 
+    array (
+      0 => 'BoneTest\\ViewPackageTest::testPackage',
+    ),
+    23 => 
+    array (
+      0 => 'BoneTest\\ViewPackageTest::testPackage',
+    ),
+    24 => 
+    array (
+      0 => 'BoneTest\\ViewPackageTest::testPackage',
+    ),
+  ),
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewAwareInterface.php' => 
+  array (
+  ),
+));
+$coverage->setTests(array (
+  'BoneTest\\HasViewTest::testTrait' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testPackage' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testWithCssClass' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testMultiline' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testPaginatorPageCountException' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testPaginatorException' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testPaginator' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testCalculateStart' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testCalculateStart2' => 
+  array (
+    'size' => 'unknown',
+    'status' => 3,
+  ),
+  'BoneTest\\ViewHelperTest::testSetPageCountByTotalRecords' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testLastPage' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testEvenPagerSizePage' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewHelperTest::testLotsOfPages' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'BoneTest\\ViewPackageTest::testPackage' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'UNCOVERED_FILES_FROM_WHITELIST' => 
+  array (
+    'size' => 'unknown',
+    'status' => -1,
+  ),
+));
+
+$filter = $coverage->filter();
+$filter->setWhitelistedFiles(array (
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewAwareInterface.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Extension/Plates/AlertBox.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Traits/HasViewTrait.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewEngine.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewPackage.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/ViewEngineInterface.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Helper/AlertBox.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Helper/Paginator.php' => true,
+  '/var/www/html/vendor/delboy1978uk/bone-view/src/Helper/Exception/PaginatorException.php' => true,
+));
+
+return $coverage;

@@ -1,3 +1,5 @@
 .idea/
+composer.lock
 composer.phar
+test/_output/*
 vendor

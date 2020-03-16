@@ -9,14 +9,23 @@
         }
     ],
     "require": {
-        "league/plates": "^3.3"
+        "php": ">7.1",
+        "delboy1978uk/barnacle": "^2.2",
+        "league/plates": "^3.3",
+        "delboy1978uk/icon": "^1.0"
     },
     "require-dev": {
+        "codeception/codeception": "^2.2",
         "roave\/security-advisories": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "Bone\\View\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BoneTest\\": "tests/unit/"
         }
     }
 }
