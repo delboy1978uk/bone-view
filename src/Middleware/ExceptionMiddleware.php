@@ -38,7 +38,7 @@ class ExceptionMiddleware extends AbstractViewMiddleware implements MiddlewareIn
         try {
             $response = $handler->handle($request);
         } catch (Exception $e) {
-            $code = $e->getStatusCode();
+            $code = get_class($e) === 'League\Route\Http\Exception\NotFoundException' ? $e->getStatusCode() : $e->getCode();
             $status = ($code >= 100 && $code < 600) ? $code : 500;
             $layout = array_key_exists($status, $this->errorPages) ? $this->errorPages[$status] : $this->errorPages['exception'];
 
