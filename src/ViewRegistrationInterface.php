@@ -2,6 +2,8 @@
 
 namespace Bone\View;
 
+use Barnacle\Container;
+
 interface ViewRegistrationInterface
 {
     /**
@@ -11,4 +13,13 @@ interface ViewRegistrationInterface
      * @return array
      */
     public function addViews(): array;
+
+
+    /**
+     * Return an array of view extensions
+     *
+     * @param Container $c
+     * @return array
+     */
+    public function addViewExtensions(Container $c): array;
 }

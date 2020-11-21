@@ -7,13 +7,19 @@ View package for Bone Mvc Framework
 Bone View is a core dependency of Bone Framework, you install Bone via the skeleton project `delboy1978uk/bonemvc`
 ## usage
 bone-view uses `league/plates` as its view engine, see the docs for that. To get an instance of the view engine from
-the dependency injection container, call `$container->get(ViewEngine::class)`. You can extend `Bone\Controller\Controller`
-and pass through `Init::controller()` to get a ViewEngine injected in your class instance.
+the dependency injection container, call `$container->get(ViewEngine::class)`. You can also simply extend `Bone\Controller\Controller`
+and pass through `Init::controller($controller)` to get a ViewEngine injected in your class instance.
+## layouts
+Your app by default has layouts in `src/App/View/layouts`. You can switch layouts in your controller by adding a 
+`layout` header to your response like so:
+```php
+return $response->withHeader('layout', 'layouts::your-template');
+```
 ## view extensions
 ### alert box
 From a view file, you can call 
 ```php
-$this->alertBox($messages)
+$this->alertBox($messages);
 ```
  where messages is an array of variable length, but the last 
 is the bootstrap `alert-*` class, so a value like `info`, `danger`, `warning`, `success`, etc.
