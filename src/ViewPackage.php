@@ -6,14 +6,14 @@ namespace Bone\View;
 
 use Barnacle\Container;
 use Barnacle\RegistrationInterface;
+use Bone\Http\GlobalMiddlewareRegistrationInterface;
 use Bone\Http\Middleware\Stack;
-use Bone\Http\MiddlewareAwareInterface;
 use Bone\View\Extension\Plates\AlertBox;
 use Bone\View\Middleware\ExceptionMiddleware;
 use Bone\View\Middleware\LayoutMiddleware;
 use Bone\View\ViewEngine;
 
-class ViewPackage implements RegistrationInterface, MiddlewareAwareInterface
+class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistrationInterface
 {
     /**
      * @param Container $c
@@ -26,16 +26,33 @@ class ViewPackage implements RegistrationInterface, MiddlewareAwareInterface
         $c[ViewEngine::class] = $viewEngine;
     }
 
-    public function addMiddleware(Stack $stack, Container $c): void
+    /**
+     * @param Container $container
+     * @return array
+     */
+    public function getMiddleware(Container $c): array
     {
         $defaultLayout = $c->get('default_layout');
         $errorPages = $c->get('error_pages');
         $viewEngine = $c->get(ViewEngine::class);
         $layoutMiddleware = new LayoutMiddleware($viewEngine, $defaultLayout);
         $exceptionMiddleware = new ExceptionMiddleware($viewEngine, $errorPages);
-        $stack->addMiddleWare($layoutMiddleware);
-        $stack->addMiddleWare($exceptionMiddleware);
+
+        return [
+            $layoutMiddleware,
+            $exceptionMiddleware,
+        ];
     }
 
-
+    /**
+     * @param Container $c
+     * @return array
+     */
+    public function getGlobalMiddleware(Container $c): array
+    {
+        return [
+            LayoutMiddleware::class,
+            ExceptionMiddleware::class
+        ];
+    }
 }
