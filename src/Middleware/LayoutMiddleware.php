@@ -2,6 +2,7 @@
 
 namespace Bone\View\Middleware;
 
+use Bone\Server\SiteConfig;
 use Bone\View\ViewEngineInterface;
 use Laminas\Diactoros\Response;
 use Laminas\Diactoros\Response\HtmlResponse;
@@ -19,14 +20,20 @@ class LayoutMiddleware implements MiddlewareInterface
     /** @var string $defaultLayout\ */
     private $defaultLayout;
 
+    /** @var SiteConfig $config\ */
+    private $config;
+
     /**
      * LayoutMiddleware constructor.
      * @param ViewEngineInterface $viewEngine
+     * @param string $defaultLayout
+     * @param SiteConfig $config
      */
-    public function __construct(ViewEngineInterface $viewEngine, string $defaultLayout)
+    public function __construct(ViewEngineInterface $viewEngine, string $defaultLayout, SiteConfig $config)
     {
         $this->viewEngine = $viewEngine;
         $this->defaultLayout = $defaultLayout;
+        $this->config = $config;
     }
 
     /**
@@ -41,6 +48,7 @@ class LayoutMiddleware implements MiddlewareInterface
 
         if ($response->hasHeader('layout')) {
             $layout = $response->getHeader('layout')[0];
+            $layout = $layout === 'none' ? false : $layout;
         }
 
         $response = $response->withoutHeader('header');
@@ -52,7 +60,13 @@ class LayoutMiddleware implements MiddlewareInterface
             return $response;
         }
 
-        $body = ['content' => $response->getBody()->getContents()];
+        $body = [
+            'content' => $response->getBody()->getContents(),
+            'config' => $this->config
+        ];
+
+        $body['user'] = $response->hasHeader('user') ? json_decode($response->getHeaderLine('user') ): null;
+
         $body = $this->viewEngine->render($layout, $body);
 
         return $this->getResponseWithBodyAndStatus($response, $body, $response->getStatusCode());

@@ -8,6 +8,7 @@ use Barnacle\Container;
 use Barnacle\RegistrationInterface;
 use Bone\Http\GlobalMiddlewareRegistrationInterface;
 use Bone\Http\Middleware\Stack;
+use Bone\Server\SiteConfig;
 use Bone\View\Extension\Plates\AlertBox;
 use Bone\View\Middleware\ExceptionMiddleware;
 use Bone\View\Middleware\LayoutMiddleware;
@@ -35,7 +36,8 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
         $defaultLayout = $c->get('default_layout');
         $errorPages = $c->get('error_pages');
         $viewEngine = $c->get(ViewEngine::class);
-        $layoutMiddleware = new LayoutMiddleware($viewEngine, $defaultLayout);
+        $config = $c->get(SiteConfig::class);
+        $layoutMiddleware = new LayoutMiddleware($viewEngine, $defaultLayout, $config);
         $exceptionMiddleware = new ExceptionMiddleware($viewEngine, $errorPages);
 
         return [
