@@ -2,10 +2,11 @@
 
 namespace Bone\View\Middleware;
 
+use Bone\Http\Response;
 use Bone\Http\Response\LayoutResponse;
 use Bone\Server\SiteConfig;
 use Bone\View\ViewEngineInterface;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Bone\Http\Response\HtmlResponse;
 use Laminas\Diactoros\Stream;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -17,10 +18,10 @@ class LayoutMiddleware implements MiddlewareInterface
     /** @var ViewEngineInterface $viewEngine */
     private $viewEngine;
 
-    /** @var string $defaultLayout\ */
+    /** @var string $defaultLayout \ */
     private $defaultLayout;
 
-    /** @var SiteConfig $config\ */
+    /** @var SiteConfig $config \ */
     private $config;
 
     /**
@@ -46,7 +47,7 @@ class LayoutMiddleware implements MiddlewareInterface
         $response = $handler->handle($request);
         $layout = $this->defaultLayout;
 
-        if ($response instanceof LayoutResponse)  {
+        if ($response instanceof LayoutResponse) {
             $layout = $response->getLayout();
         } elseif ($response->hasHeader('layout')) {
             $layout = $response->getHeader('layout')[0];
@@ -55,7 +56,7 @@ class LayoutMiddleware implements MiddlewareInterface
         }
 
         $contentType = $response->getHeader('Content-Type');
-        $isHtmlResponse = $response instanceof HtmlResponse;
+        $isHtmlResponse = $response instanceof HtmlResponse || get_class($response) === 'Laminas\Diactoros\Response\HtmlResponse';
         $hasHtmlContent = count($contentType) ? strstr($contentType[0], 'text/html') : true;
 
         if ((!$isHtmlResponse || !$hasHtmlContent || !$layout)) {
@@ -64,10 +65,23 @@ class LayoutMiddleware implements MiddlewareInterface
 
         $body = [
             'content' => $response->getBody()->getContents(),
-            'config' => $this->config
+            'config' => $this->config,
+            'user' => null,
+            'vars' => [],
         ];
 
-        $body['user'] = $response->hasHeader('user') ? json_decode($response->getHeaderLine('user') ): null;
+        if ($response instanceof Response) {
+
+            if ($response->hasAttribute('user')) {
+                $body['user'] = $response->getAttribute('user');
+            }
+
+            if ($response->hasAttribute('vars')) {
+                $body['vars'] = $response->getAttribute('vars');
+            }
+
+        }
+
         $body = $this->viewEngine->render($layout, $body);
 
         return $this->getResponseWithBodyAndStatus($response, $body, $response->getStatusCode());
