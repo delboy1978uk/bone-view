@@ -41,8 +41,8 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
         $exceptionMiddleware = new ExceptionMiddleware($viewEngine, $errorPages);
 
         return [
-            $layoutMiddleware,
             $exceptionMiddleware,
+            $layoutMiddleware,
         ];
     }
 
@@ -53,8 +53,8 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
     public function getGlobalMiddleware(Container $c): array
     {
         return [
+            ExceptionMiddleware::class,
             LayoutMiddleware::class,
-            ExceptionMiddleware::class
         ];
     }
 }

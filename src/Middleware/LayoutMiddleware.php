@@ -2,9 +2,9 @@
 
 namespace Bone\View\Middleware;
 
+use Bone\Http\Response\LayoutResponse;
 use Bone\Server\SiteConfig;
 use Bone\View\ViewEngineInterface;
-use Laminas\Diactoros\Response;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Laminas\Diactoros\Stream;
 use Psr\Http\Message\ResponseInterface;
@@ -46,12 +46,14 @@ class LayoutMiddleware implements MiddlewareInterface
         $response = $handler->handle($request);
         $layout = $this->defaultLayout;
 
-        if ($response->hasHeader('layout')) {
+        if ($response instanceof LayoutResponse)  {
+            $layout = $response->getLayout();
+        } elseif ($response->hasHeader('layout')) {
             $layout = $response->getHeader('layout')[0];
             $layout = $layout === 'none' ? false : $layout;
+            $response = $response->withoutHeader('header');
         }
 
-        $response = $response->withoutHeader('header');
         $contentType = $response->getHeader('Content-Type');
         $isHtmlResponse = $response instanceof HtmlResponse;
         $hasHtmlContent = count($contentType) ? strstr($contentType[0], 'text/html') : true;
@@ -66,7 +68,6 @@ class LayoutMiddleware implements MiddlewareInterface
         ];
 
         $body['user'] = $response->hasHeader('user') ? json_decode($response->getHeaderLine('user') ): null;
-
         $body = $this->viewEngine->render($layout, $body);
 
         return $this->getResponseWithBodyAndStatus($response, $body, $response->getStatusCode());
@@ -74,12 +75,12 @@ class LayoutMiddleware implements MiddlewareInterface
 
 
     /**
-     * @param Response $response
+     * @param ResponseInterface $response
      * @param string $body
      * @param int $status
      * @return ResponseInterface
      */
-    private function getResponseWithBodyAndStatus(Response $response, string $body, int $status = 200): ResponseInterface
+    private function getResponseWithBodyAndStatus(ResponseInterface $response, string $body, int $status = 200): ResponseInterface
     {
         $stream = new Stream('php://memory', 'r+');
         $stream->write($body);
