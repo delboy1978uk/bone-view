@@ -46,6 +46,8 @@ class ExceptionMiddleware extends AbstractViewMiddleware implements MiddlewareIn
                 'message' => $e->getMessage(),
                 'code' => $status,
                 'trace' => $e->getTrace(),
+                'line' => $e->getLine(),
+                'file' => $e->getFile(),
             ]);
 
             $response = new HtmlResponse($body, $status);
