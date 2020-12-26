@@ -49,6 +49,7 @@ class LayoutMiddleware implements MiddlewareInterface
 
         if ($response instanceof LayoutResponse) {
             $layout = $response->getLayout();
+            $layout = $layout === 'none' ? false : $layout;
         } elseif ($response->hasHeader('layout')) {
             $layout = $response->getHeader('layout')[0];
             $layout = $layout === 'none' ? false : $layout;
