@@ -1,6 +1,6 @@
 # bone-view
 [![Latest Stable Version](https://poser.pugx.org/delboy1978uk/bone-view/v/stable)](https://packagist.org/packages/delboy1978uk/bone-view) [![Total Downloads](https://poser.pugx.org/delboy1978uk/bone/downloads)](https://packagist.org/packages/delboy1978uk/bone) [![Latest Unstable Version](https://poser.pugx.org/delboy1978uk/bone-view/v/unstable)](https://packagist.org/packages/delboy1978uk/bone-view) [![License](https://poser.pugx.org/delboy1978uk/bone-view/license)](https://packagist.org/packages/delboy1978uk/bone-view)<br />
-[![Build Status](https://travis-ci.org/delboy1978uk/bone-view.png?branch=master)](https://travis-ci.org/delboy1978uk/bone-view) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/?branch=master)<br />
+![build status](https://github.com/delboy1978uk/bone-router/actions/workflows/master.yml/badge.svg) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bone-view/?branch=master)<br />
 
 View package for Bone Mvc Framework
 ## installation

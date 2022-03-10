@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace BoneTest;
+namespace Bone\Test;
 
 use Barnacle\Container;
 use Bone\View\ViewEngine;

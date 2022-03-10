@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace BoneTest;
+namespace Bone\Test;
 
 use Bone\View\Traits\HasViewTrait;
 use Bone\View\ViewEngine;
