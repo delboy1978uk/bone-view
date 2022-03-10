@@ -25,6 +25,7 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
         $viewEngine = new ViewEngine();
         $viewEngine->loadExtension(new AlertBox());
         $c[ViewEngine::class] = $viewEngine;
+        $c[ViewEngineInterface::class] = $viewEngine;
     }
 
     /**
@@ -35,7 +36,7 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
     {
         $defaultLayout = $c->get('default_layout');
         $errorPages = $c->get('error_pages');
-        $viewEngine = $c->get(ViewEngine::class);
+        $viewEngine = $c->get(ViewEngineInterface::class);
         $config = $c->get(SiteConfig::class);
         $layoutMiddleware = new LayoutMiddleware($viewEngine, $defaultLayout, $config);
         $exceptionMiddleware = new ExceptionMiddleware($viewEngine, $errorPages);
