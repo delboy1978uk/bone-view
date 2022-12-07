@@ -45,7 +45,6 @@ class ExceptionMiddleware extends AbstractViewMiddleware implements MiddlewareIn
             $body = $this->viewEngine->render($layout, [
                 'message' => $e->getMessage(),
                 'code' => $status,
-                'trace' => $e->getTrace(),
                 'line' => $e->getLine(),
                 'file' => $e->getFile(),
             ]);
