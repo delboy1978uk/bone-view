@@ -6,9 +6,9 @@ use Barnacle\Container;
 use Bone\View\ViewEngine;
 use Bone\View\ViewEngineInterface;
 use Bone\View\ViewPackage;
-use Codeception\TestCase\Test;
+use Codeception\Test\Unit;
 
-class ViewPackageTest extends Test
+class ViewPackageTest extends Unit
 {
     public function testPackage()
     {
