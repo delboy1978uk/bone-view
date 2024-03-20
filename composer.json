@@ -14,7 +14,8 @@
         "delboy1978uk/bone-http": "dev-feature/php82and83 as 2.3.2",
         "delboy1978uk/bone-server": "^1.2",
         "delboy1978uk/icon": "^1.0",
-        "league/plates": "^3.3"
+        "league/plates": "^3.3",
+        "scrutinizer/ocular": "^1.9"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
