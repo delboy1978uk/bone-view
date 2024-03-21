@@ -5,9 +5,9 @@ namespace Bone\Test;
 use Bone\View\Extension\Plates\AlertBox;
 use Bone\View\Helper\Exception\PaginatorException;
 use Bone\View\Helper\Paginator;
-use Codeception\TestCase\Test;
+use Codeception\Test\Unit;
 
-class ViewHelperTest extends Test
+class ViewHelperTest extends Unit
 {
     public function testPackage()
     {

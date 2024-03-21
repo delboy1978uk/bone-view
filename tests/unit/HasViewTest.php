@@ -5,10 +5,10 @@ namespace Bone\Test;
 use Bone\View\Traits\HasViewTrait;
 use Bone\View\ViewEngine;
 use Bone\View\ViewEngineInterface;
-use Codeception\TestCase\Test;
+use Codeception\Test\Unit;
 use Del\SessionManager;
 
-class HasViewTest extends Test
+class HasViewTest extends Unit
 {
     public function testTrait()
     {
