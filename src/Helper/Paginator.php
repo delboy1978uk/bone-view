@@ -5,6 +5,8 @@ namespace Bone\View\Helper;
 use Bone\View\Helper\Exception\PaginatorException;
 use Del\Icon;
 
+use function str_replace;
+
 class Paginator
 {
     private $currentPage = 1;
@@ -12,6 +14,7 @@ class Paginator
     private $pagerSize = 5;
     private $url;
     private $urlPart = ':page';
+    private ?int $limit = null;
 
     /**
      * @param int $pageNum
@@ -19,7 +22,18 @@ class Paginator
      */
     private function url(int $pageNum): string
     {
-        return str_replace($this->urlPart, $pageNum, $this->url);
+        $url = str_replace($this->urlPart, $pageNum, $this->url);
+
+        if ($this->limit) {
+            $url = str_replace(':limit', $this->limit, $url);
+        }
+
+        return $url;
+    }
+
+    public function setLimit(?int $limit): void
+    {
+        $this->limit = $limit;
     }
 
     /**
