@@ -10,6 +10,7 @@
     ],
     "require": {
         "php": "^8.2",
+        "boneframework/contracts": "^v1.3",
         "delboy1978uk/barnacle": "^2.3",
         "delboy1978uk/bone-http": "^2.4.0",
         "delboy1978uk/bone-server": "^1.2",
