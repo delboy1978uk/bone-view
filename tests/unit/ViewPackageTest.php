@@ -14,6 +14,7 @@ class ViewPackageTest extends Unit
     {
         $container = new Container();
         $container['viewFolder'] = 'tests/_data';
+        $container['packages'] = [];
         $package = new ViewPackage();
         $package->addToContainer($container);
         $this->assertInstanceOf(ViewEngineInterface::class, $container->get(ViewEngineInterface::class));
