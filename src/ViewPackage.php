@@ -9,6 +9,7 @@ use Barnacle\RegistrationInterface;
 use Bone\Http\GlobalMiddlewareRegistrationInterface;
 use Bone\Http\Middleware\Stack;
 use Bone\Server\SiteConfig;
+use Bone\View\Extension\Plates\AdminLinks;
 use Bone\View\Extension\Plates\AlertBox;
 use Bone\View\Middleware\ExceptionMiddleware;
 use Bone\View\Middleware\LayoutMiddleware;
@@ -23,7 +24,9 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
     {
         // set up the view engine dependencies
         $viewEngine = new ViewEngine();
+        $packages = $c->get('packages');
         $viewEngine->loadExtension(new AlertBox());
+        $viewEngine->loadExtension(new AdminLinks($packages));
         $c[ViewEngine::class] = $viewEngine;
         $c[ViewEngineInterface::class] = $viewEngine;
     }
