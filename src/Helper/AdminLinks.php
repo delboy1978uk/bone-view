@@ -15,38 +15,56 @@ class AdminLinks
     private string $iClass = 'nav-icon fa fa-circle';
 
     public function __construct(
-        private array $packages
+        private array $packages,
     ) {}
 
     public function links()
     {
         $html = '<ul class="' . $this->ulClass .'" data-widget="treeview" role="menu" data-accordion="false">';
+        $adminLinks = [];
 
         foreach ($this->packages as $class) {
             $package = new $class();
 
             if ($package instanceof AdminPanelProviderInterface) {
-                $links = $package->getAdminLinks();
+                $linksToAdd = $package->getAdminLinks();
 
-                /** @var  AdminLink $link*/
-                foreach ($links as $link) {
-                    $name = $link->getName();
-                    $url = $link->getUrl();
-                    $iClass = $link->getIconClass() ?? $this->iClass;
-                    $aClass = $link->getAClass() ?? $this->aClass;
-                    $liClass = $link->getLiClass() ?? $this->liClass;
-                    $html .= '<li class="' . $liClass . '">';
-                    $html .= '<a class="' . $aClass . '" href="' . $url . '">';
-                    $html .= '<i class="' . $iClass . '"></i>';
-                    $html .= '<p>' . $name . '</p>';
-                    $html .= '</a>';
-                    $html .= '</li>';
+                foreach ($linksToAdd as $link) {
+                    $adminLinks[] = $link;
                 }
             }
+        }
+
+        $links = $this->sortLinks($adminLinks);
+
+        /** @var  AdminLink $link*/
+        foreach ($links as $link) {
+            $name = $link->getName();
+            $url = $link->getUrl();
+            $iClass = $link->getIconClass() ?? $this->iClass;
+            $aClass = $link->getAClass() ?? $this->aClass;
+            $liClass = $link->getLiClass() ?? $this->liClass;
+            $html .= '<li class="' . $liClass . '">';
+            $html .= '<a class="' . $aClass . '" href="' . $url . '">';
+            $html .= '<i class="' . $iClass . '"></i>';
+            $html .= '<p>' . $name . '</p>';
+            $html .= '</a>';
+            $html .= '</li>';
         }
 
         $html .= '</ul>';
 
         return $html;
+    }
+
+    private function sortLinks(array $links): array
+    {
+        $sort = function($a, $b) {
+            return $a->getName() <=> $b->getName();
+        };
+
+        usort($links, $sort);
+
+        return $links;
     }
 }
