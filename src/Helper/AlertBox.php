@@ -6,43 +6,41 @@ class AlertBox
 {
     /**
      * @param array $message array of messages, last item in array should be alert class
-     * @return bool|string
+     * @return string
      */
-    public function alertBox(array $message)
+    public function alertBox(array $message, bool $closeButton = true): string
     {
         $class = $this->getClass($message);
-        $alert = '<div class="alert ' . $class . '"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' . $this->renderMessage($message) . '</div>';
+        $alert = '<div class="alert ' . $class . '">';
+        $alert .= $closeButton ? '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' : '';
+        $alert .= $this->renderMessage($message) . '</div>';
 
         return $alert;
     }
 
-    /**
-     * @param array $message
-     * @return string
-     */
-    private function getClass(array $message)
+    private function getClass(array $message): string
     {
         if (count($message) < 2) {
             return 'alert-info';
         }
+
         $class = array_pop($message);
-        $class = (!strstr($class, 'alert-')) ? 'alert-' . $class : '';
+        $class = (strpos($class, 'alert-') === false) ? 'alert-' . $class : '';
 
         return $class;
     }
 
-    /**
-     * @param array $message
-     * @return string
-     */
-    private function renderMessage(array $message)
+    private function renderMessage(array $message): string
     {
         $alert = '';
+
         if (count($message) > 1) {
             array_pop($message);
         }
+
         $num = count($message);
         $x = 1;
+
         foreach ($message as $msg) {
             $alert .= $msg;
             if ($x < $num) {
@@ -50,6 +48,7 @@ class AlertBox
             }
             $x++;
         }
+
         return $alert;
     }
 }
