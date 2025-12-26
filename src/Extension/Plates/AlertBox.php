@@ -15,11 +15,11 @@ class AlertBox implements ExtensionInterface
     {
         $engine->registerFunction('alert', [$this, 'alertBox']);
     }
-    
-    public function alertBox(array $message) : string
+
+    public function alertBox(array $message, bool $closeButton =  true) : string
     {
         $box = new AlertBoxHelper();
 
-        return $box->alertBox($message);
+        return $box->alertBox($message, $closeButton);
     }
 }
