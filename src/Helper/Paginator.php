@@ -9,17 +9,13 @@ use function str_replace;
 
 class Paginator
 {
-    private $currentPage = 1;
-    private $pageCount;
-    private $pagerSize = 5;
-    private $url;
-    private $urlPart = ':page';
+    private int $currentPage = 1;
+    private int $pageCount;
+    private int $pagerSize = 5;
+    private string $url;
+    private string $urlPart = ':page';
     private ?int $limit = null;
 
-    /**
-     * @param int $pageNum
-     * @return string
-     */
     private function url(int $pageNum): string
     {
         $url = str_replace($this->urlPart, $pageNum, $this->url);
@@ -36,49 +32,31 @@ class Paginator
         $this->limit = $limit;
     }
 
-    /**
-     * @param $pageCount
-     */
     public function setPageCount(int $pageCount): void
     {
         $this->pageCount = $pageCount;
     }
 
-    /**
-     * @param $pageCount
-     */
     public function setPageCountByTotalRecords(int $rowCount, int $numPerPage): void
     {
         $this->pageCount = (int)ceil($rowCount / $numPerPage) ?: 1;
     }
 
-    /**
-     * @param $url
-     */
     public function setUrl(string $url): void
     {
         $this->url = $url;
     }
 
-    /**
-     * @param $replace
-     */
     public function setUrlPart(string $replace): void
     {
         $this->urlPart = $replace;
     }
 
-    /**
-     * @param int $page_no
-     */
     public function setCurrentPage(int $page_no): void
     {
         $this->currentPage = $page_no;
     }
 
-    /**
-     * @param int $numBoxes an ODD number!
-     */
     public function setPagerSize(int $numBoxes): void
     {
         if ($numBoxes % 2 === 0) {
@@ -87,17 +65,11 @@ class Paginator
         $this->pagerSize = $numBoxes;
     }
 
-    /**
-     * @return int
-     */
     public function getPagerSize(): int
     {
         return $this->pagerSize;
     }
 
-    /**
-     * @throws PaginatorException
-     */
     private function ensurePageCount()
     {
         if (null === $this->pageCount) {
@@ -105,9 +77,6 @@ class Paginator
         }
     }
 
-    /**
-     * @throws PaginatorException
-     */
     private function ensureUrl()
     {
         if (null === $this->url) {
@@ -115,9 +84,6 @@ class Paginator
         }
     }
 
-    /**
-     * @return int
-     */
     private function calculateStart(int $pages): int
     {
         $half = ($pages - 1) / 2;
@@ -137,10 +103,6 @@ class Paginator
         return $start;
     }
 
-    /**
-     * @return string
-     * @throws PaginatorException
-     */
     public function render(): string
     {
         $this->ensurePageCount();
@@ -170,11 +132,6 @@ class Paginator
         return $html;
     }
 
-    /**
-     * @param string $icon
-     * @param bool $fastBackward
-     * @return string
-     */
     private function renderRewind($icon = Icon::BACKWARD, bool $fastBackward = false): string
     {
         $urlPageNo = $fastBackward ? 1 : $this->currentPage - 1;
@@ -189,11 +146,6 @@ class Paginator
         return $html;
     }
 
-    /**
-     * @param string $icon
-     * @param bool $fastForward
-     * @return string
-     */
     private function renderForward($icon = Icon::FORWARD, bool $fastForward = false): string
     {
         $urlPageNo = $fastForward ? $this->pageCount : $this->currentPage + 1;
@@ -208,10 +160,6 @@ class Paginator
         return $html;
     }
 
-    /**
-     * @param int $pageNo
-     * @return string
-     */
     private function renderBox(int $pageNo): string
     {
         $html = '<li class="page-item ';

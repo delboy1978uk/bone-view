@@ -15,21 +15,10 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class LayoutMiddleware implements MiddlewareInterface
 {
-    /** @var ViewEngineInterface $viewEngine */
-    private $viewEngine;
-
-    /** @var string $defaultLayout \ */
-    private $defaultLayout;
-
-    /** @var SiteConfig $config \ */
+    private ViewEngineInterface $viewEngine;
+    private string $defaultLayout;
     private $config;
 
-    /**
-     * LayoutMiddleware constructor.
-     * @param ViewEngineInterface $viewEngine
-     * @param string $defaultLayout
-     * @param SiteConfig $config
-     */
     public function __construct(ViewEngineInterface $viewEngine, string $defaultLayout, SiteConfig $config)
     {
         $this->viewEngine = $viewEngine;
@@ -37,11 +26,6 @@ class LayoutMiddleware implements MiddlewareInterface
         $this->config = $config;
     }
 
-    /**
-     * @param ServerRequestInterface $request
-     * @param RequestHandlerInterface $handler
-     * @return ResponseInterface
-     */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $response = $handler->handle($request);
@@ -88,13 +72,6 @@ class LayoutMiddleware implements MiddlewareInterface
         return $this->getResponseWithBodyAndStatus($response, $body, $response->getStatusCode());
     }
 
-
-    /**
-     * @param ResponseInterface $response
-     * @param string $body
-     * @param int $status
-     * @return ResponseInterface
-     */
     private function getResponseWithBodyAndStatus(ResponseInterface $response, string $body, int $status = 200): ResponseInterface
     {
         $stream = new Stream('php://memory', 'r+');

@@ -6,20 +6,13 @@ use Bone\View\ViewEngineInterface;
 
 trait HasViewTrait
 {
-    /** @var ViewEngineInterface $view */
-    protected $view;
+    protected ViewEngineInterface $view;
 
-    /**
-     * @param ViewEngineInterface $view
-     */
     public function setView(ViewEngineInterface $view): void
     {
         $this->view = $view;
     }
 
-    /**
-     * @return ViewEngineInterface
-     */
     public function getView(): ViewEngineInterface
     {
         return $this->view;

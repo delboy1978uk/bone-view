@@ -12,32 +12,22 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class ExceptionMiddleware extends AbstractViewMiddleware implements MiddlewareInterface
 {
-    /** @var ViewEngineInterface $viewEngine */
-    private $viewEngine;
+    private ViewEngineInterface $viewEngine;
+    private array $errorPages;
 
-    /** @var array $errorPages\ */
-    private $errorPages;
-
-    /**
-     * LayoutMiddleware constructor.
-     * @param ViewEngineInterface $viewEngine
-     */
     public function __construct(ViewEngineInterface $viewEngine, array $errorPages)
     {
         $this->viewEngine = $viewEngine;
         $this->errorPages = $errorPages;
     }
 
-    /**
-     * @param ServerRequestInterface $request
-     * @param RequestHandlerInterface $handler
-     * @return ResponseInterface
-     */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         try {
             $response = $handler->handle($request);
         } catch (Exception $e) {
+            error_log($e->getMessage());
+            error_log($e->getTraceAsString());
             $code = strstr(get_class($e), 'League') ? $e->getStatusCode() : $e->getCode();
             $status = ($code >= 100 && $code < 600) ? $code : 500;
             $layout = array_key_exists($status, $this->errorPages) ? $this->errorPages[$status] : $this->errorPages['exception'];

@@ -17,9 +17,7 @@ use Bone\View\ViewEngine;
 
 class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistrationInterface
 {
-    /**
-     * @param Container $c
-     */
+
     public function addToContainer(Container $c)
     {
         // set up the view engine dependencies
@@ -31,10 +29,6 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
         $c[ViewEngineInterface::class] = $viewEngine;
     }
 
-    /**
-     * @param Container $container
-     * @return array
-     */
     public function getMiddleware(Container $c): array
     {
         $defaultLayout = $c->get('default_layout');
@@ -50,10 +44,6 @@ class ViewPackage implements RegistrationInterface, GlobalMiddlewareRegistration
         ];
     }
 
-    /**
-     * @param Container $c
-     * @return array
-     */
     public function getGlobalMiddleware(Container $c): array
     {
         return [

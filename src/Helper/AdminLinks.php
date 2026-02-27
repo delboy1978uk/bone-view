@@ -18,7 +18,7 @@ class AdminLinks
         private array $packages,
     ) {}
 
-    public function links()
+    public function links(): string
     {
         $html = '<ul class="' . $this->ulClass .'" data-widget="treeview" role="menu" data-accordion="false">';
         $adminLinks = [];
