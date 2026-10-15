@@ -12,7 +12,7 @@ class Paginator
     private int $currentPage = 1;
     private int $pageCount;
     private int $pagerSize = 5;
-    private string $url;
+    private string $url = '';
     private string $urlPart = ':page';
     private ?int $limit = null;
 

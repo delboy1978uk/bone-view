@@ -28,7 +28,7 @@ class ExceptionMiddleware extends AbstractViewMiddleware implements MiddlewareIn
         } catch (Exception $e) {
             error_log($e->getMessage());
             error_log($e->getTraceAsString());
-            $code = strstr(get_class($e), 'League') ? $e->getStatusCode() : $e->getCode();
+            $code = strpos(get_class($e), 'League') !== false ? $e->getStatusCode() : $e->getCode();
             $status = ($code >= 100 && $code < 600) ? $code : 500;
             $layout = array_key_exists($status, $this->errorPages) ? $this->errorPages[$status] : $this->errorPages['exception'];
 
