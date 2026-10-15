@@ -10,9 +10,9 @@ use function str_replace;
 class Paginator
 {
     private int $currentPage = 1;
-    private int $pageCount;
+    private ?int $pageCount = null;
     private int $pagerSize = 5;
-    private string $url = '';
+    private ?string $url = null;
     private string $urlPart = ':page';
     private ?int $limit = null;
 
